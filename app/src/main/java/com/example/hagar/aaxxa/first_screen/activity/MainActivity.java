@@ -41,13 +41,14 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
 
     }
 
-
+    // add number to database
     @OnClick(R.id.add)
     public void add(View view) {
         NumberPojo obj = new NumberPojo();
 
         String number = numbers.getText().toString();
         String regex = "\\d+";
+        //check if user's input only numbers
         if (number.matches("[0-9]+"))
         {
             obj.setNumber(number);
@@ -57,9 +58,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
         }
 
     }
-
+    //  go to the numbers list screen
     @OnClick(R.id.show)
     public void show(View view) {
+
         Intent intent = new Intent(MainActivity.this, AllNumbers.class);
         startActivity(intent);
     }

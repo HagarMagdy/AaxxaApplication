@@ -10,6 +10,6 @@ import java.util.ArrayList;
 
 public interface AllNumbersPresenterInterface {
     void setArray(ArrayList<NumberPojo> numbers);
-
+    void showError();
     void getAll();
 }

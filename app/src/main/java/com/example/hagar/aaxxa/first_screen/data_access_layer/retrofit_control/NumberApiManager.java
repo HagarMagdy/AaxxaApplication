@@ -33,7 +33,7 @@ public class NumberApiManager implements NumberApiManagerInterface {
             @Override
             public void onResponse(Call<ResponseMessage> call, Response<ResponseMessage> response) {
 
-
+                    // in this case, number added successfully
                     presenter.showSuccessMessage();
 
             }

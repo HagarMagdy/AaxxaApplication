@@ -10,5 +10,5 @@ import java.util.ArrayList;
 
 public interface AllNumbersInterface {
     void getNumbers(ArrayList<NumberPojo> numbers);
-
+    void showError();
 }

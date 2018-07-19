@@ -42,6 +42,7 @@ public class AllNumbersApiManager implements AllNumbersApiNumbersInterface {
             @Override
             public void onFailure(Call<NumbersListPojo> call, Throwable t) {
 
+                presenter.showError();
             }
         });
         return allNumbers;

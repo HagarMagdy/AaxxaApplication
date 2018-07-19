@@ -44,6 +44,11 @@ public class AllNumbersPresenter implements AllNumbersPresenterInterface  {
     }
 
     @Override
+    public void showError() {
+    view.showError();
+    }
+
+    @Override
     public void getAll() {
         model.getAllNumbers();
     }

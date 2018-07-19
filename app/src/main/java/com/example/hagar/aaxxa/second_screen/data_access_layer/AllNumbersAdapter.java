@@ -42,7 +42,7 @@ public class AllNumbersAdapter extends ArrayAdapter {
 
         TextView id =(TextView ) row.findViewById(R.id.theid);
         TextView number = (TextView)row.findViewById(R.id.num);
-        Log.i("key","id = "+numbers.get(position).getId());
+        // set the row values
         id.setText(Integer.toString(numbers.get(position).getId()));
         number.setText(Integer.toString(numbers.get(position).getNumber()));
 

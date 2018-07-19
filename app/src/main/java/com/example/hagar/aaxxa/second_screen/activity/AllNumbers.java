@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.hagar.aaxxa.R;
 import com.example.hagar.aaxxa.second_screen.data_access_layer.AllNumbersAdapter;
@@ -21,7 +22,7 @@ import butterknife.ButterKnife;
 public class AllNumbers extends AppCompatActivity implements AllNumbersInterface {
 
     @BindView((R.id.list))
-     ListView lv;
+     ListView listv;
 
     AllNumbersPresenter presenter;
     ArrayList<NumberPojo> allNumbers;
@@ -38,9 +39,15 @@ public class AllNumbers extends AppCompatActivity implements AllNumbersInterface
 
     @Override
     public void getNumbers(ArrayList<NumberPojo> numbers) {
-
+        // set the adapter with the numbers list
         AllNumbersAdapter adapter=new AllNumbersAdapter(this,R.id.theid,R.id.num,R.layout.cell,numbers);
-        ListView listv=findViewById(R.id.list);
+
         listv.setAdapter(adapter);
+    }
+
+    @Override
+    public void showError() {
+        Toast.makeText(getApplicationContext(), "Network error", Toast.LENGTH_SHORT).show();
+
     }
 }
