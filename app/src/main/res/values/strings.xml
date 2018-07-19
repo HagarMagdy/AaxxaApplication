@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Aaxxa</string>
+    <string name="enterno">Enter a number to be added to the list</string>
+    <string name="enter">Enter</string>
+    <string name="show">Show numbers List</string>
+</resources>
